@@ -57,6 +57,10 @@
 
 
 - **3.2.2 Diffusion-reaction equation**
+  
+  
+  
+  
   $$
   \frac{\partial u}{\partial t} = D \frac{\partial^2 u}{\partial x^2} + R(x, t), \qquad x \in [-\pi, \pi], t \in [0, 1]
   $$
@@ -64,11 +68,14 @@
   $$
   R(x, t) = e^{-t}[\frac{3}{2}sin(2x)+\frac{8}{3}sin(3x)+\frac{15}{4}sin(4x)+\frac{63}{8}sin(8x)]
   $$
-
   
-
+  
+  
   - **Loss Function:**
-    $$
-    \mathcal{L = L_{f}+wL_{gx}+wL_{gt}} 
-    $$
     
+    
+    
+    
+    $$
+    \mathcal{L = L_{f}+wL_{gx}+wL_{gt}}
+    $$
