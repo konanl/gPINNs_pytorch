@@ -14,7 +14,7 @@
 
 #### 1. 正向问题(Forward question)
 
-- **Function approximation via a gradient-enhanced neural network **(Figure.1)
+- **Function approximation via a gradient-enhanced neural network** (Figure.1)
 
   $$ u(x) = −(1.4 − 3x) sin(18x), x \in [0, 1] $$
 
@@ -35,11 +35,11 @@
 
 - **3.2.1 Poisson equation**
 
-  ### $\Delta u = \sum_{i=1}^{4} isin(ix) + 8sin(8x),  x\in [0, \pi] $
+  ### $$ \Delta u = \sum_{i=1}^{4} isin(ix) + 8sin(8x),  x\in [0, \pi] $$
 
   - **Loss Function:**
 
-    ### $ \mathcal{ L = L_{f} + wL_{g} } $
+    ### $$ \mathcal{ L = L_{f} + wL_{g} } $$
 
 
 
@@ -79,3 +79,44 @@
     $$
     \mathcal{L = L_{f}+wL_{gx}+wL_{gt}}
     $$
+
+
+
+
+
+
+
+----
+
+
+
+#### 2. 反向问题(Inverse problem)
+
+- **3.3.1 Brinkman-Forchheimer model**
+
+$$
+-\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
+$$
+
+
+
+
+
+##### Loss Function:
+
+
+$$
+\mathcal{L = L_{f}+wL_{g}+L_{data}}
+$$
+
+
+
+
+### 预测对比：
+
+| Figure 6. D                        | ![figure.6 D](./paper figure/figure6 D.png)                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| 10 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-10.png)![nn](./result/figure/BF/case 1/u-gpinn-10.png) |
+| 20 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-20.png)![nn](./result/figure/BF/case 1/u-gpinn-20.png) |
+| 30 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-30.png)![nn](./result/figure/BF/case 1/u-gpinn-30.png) |
+
