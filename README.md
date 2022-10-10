@@ -28,18 +28,32 @@
 | :------------: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |    15-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-15.png)![gPINNs 15 u](./result/figure/function/u-gpinn-15.png) | ![gPINNs 15 u_g](./result/figure/function/u_g-pinn-15.png)![gPINNs 15 u_g](./result/figure/function/u_g-gpinn-15.png) |
 |    20-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-20.png)![gPINNs 15 u](./result/figure/function/u-gpinn-20.png) | ![PINNs 15 u](./result/figure/function/u_g-pinn-20.png)![gPINNs 15 u](./result/figure/function/u_g-gpinn-20.png) |
+|                |                                                              |                                                              |
 
 
+
+### Figure.1 A & B 对比：
+
+
+
+| Figure.1 A & B   | ![figure1 A](./paper figure/figure1 A.png)     | ![figure1 B](./paper figure/figure1 B.png)      |
+| ---------------- | ---------------------------------------------- | ----------------------------------------------- |
+| Figure.1  NN/gNN | ![f1 NN](./result/figure/function/L2 0f u.png) | ![f1 NN](./result/figure/function/L2 0f u`.png) |
+|                  |                                                |                                                 |
 
 
 
 - **3.2.1 Poisson equation**
-
-  ### $$ \Delta u = \sum_{i=1}^{4} isin(ix) + 8sin(8x),  x\in [0, \pi] $$
-
+  $$
+  \Delta u = \sum_{i=1}^{4} isin(ix) + 8sin(8x),  x\in [0, \pi]
+  $$
+  
+  
   - **Loss Function:**
-
-    ### $$ \mathcal{ L = L_{f} + wL_{g} } $$
+  
+    $$
+    \mathcal{ L = L_{f} + wL_{g} }
+    $$
 
 
 
