@@ -16,11 +16,14 @@
 
 - **Function approximation via a gradient-enhanced neural network** (Figure.1)
 
-  $$ u(x) = −(1.4 − 3x) sin(18x), x \in [0, 1] $$
+  $$
+  u(x) = −(1.4 − 3x) sin(18x), x \in [0, 1]
+  $$
 
   - **Loss Function:**
-
-    $$\mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}$$
+    $$
+    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}
+    $$
 
 ### **预测对比：**
 
@@ -66,6 +69,25 @@
 
 
 
+### Figure.2 A,B & C 对比：
+
+| Figure.2 A,B & C | ![A](./paper figure/figure2 A.png)           | ![A](./paper figure/figure2 B.png)            | ![A](./paper figure/figure2 C.png)             |
+| ---------------- | -------------------------------------------- | --------------------------------------------- | ---------------------------------------------- |
+| 复现             | ![A](./result/figure/poisson-1D/L2 of u.png) | ![A](./result/figure/poisson-1D/L2 of u`.png) | ![A](./result/figure/poisson-1D/pde error.png) |
+|                  |                                              |                                               |                                                |
+
+
+
+### Figure.2 F & G:
+
+
+
+| Figure.2 F & G | ![F](./paper figure/figure2 F.png)          | ![F](./paper figure/figure2 G.png)           |
+| -------------- | ------------------------------------------- | -------------------------------------------- |
+| 复现           | ![F](./result/figure/poisson-1D/u_of_w.png) | ![G](./result/figure/poisson-1D/u`_of_w.png) |
+
+
+
 
 
 
@@ -93,6 +115,20 @@
     $$
     \mathcal{L = L_{f}+wL_{gx}+wL_{gt}}
     $$
+
+
+
+### 预测对比：
+
+| ![figure bc](./paper figure/figure4 BC.png)![figure bc](./paper figure/figure4 DE.png) |
+| ------------------------------------------------------------ |
+
+
+
+| <img src="./result/figure/diffusion-reaction/exact.png" alt="exact" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/PINNs-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-PINNs-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/gPINNs, w=0.1-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-gPINNs, w=0.1-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/gPINNs, w=0.01-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-gPINNs, w=0.01-50.png" alt="PINN" style="zoom: 25%;" /> |
+| ------------------------------------------------------------ |
+
+
 
 
 
