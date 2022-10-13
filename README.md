@@ -14,20 +14,23 @@
 
 #### 1. 正向问题(Forward question)
 
-- **Function approximation via a gradient-enhanced neural network** (Figure.1)
+- **Function approximation via a gradient-enhanced neural network** 
 
   $$
   u(x) = −(1.4 − 3x) sin(18x), x \in [0, 1]
   $$
 
-  - **Loss Function:**
-    $$
-    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}
+
+  - **Loss Function:** 
+  
+    $$ 
+    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2} 
     $$
 
-### **预测对比：**
 
-| Figure.1 C & D | ![Figure.1 C](./paper figure/figure1 C.png)                  | ![Figure.1 D](./paper figure/figure1 D.png)                  |
+### 预测对比：
+
+| Figure.1 C & D | ![Figure.1 C](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20C.png)                  | ![Figure.1 D](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20D.png)                  |
 | :------------: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |    15-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-15.png)![gPINNs 15 u](./result/figure/function/u-gpinn-15.png) | ![gPINNs 15 u_g](./result/figure/function/u_g-pinn-15.png)![gPINNs 15 u_g](./result/figure/function/u_g-gpinn-15.png) |
 |    20-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-20.png)![gPINNs 15 u](./result/figure/function/u-gpinn-20.png) | ![PINNs 15 u](./result/figure/function/u_g-pinn-20.png)![gPINNs 15 u](./result/figure/function/u_g-gpinn-20.png) |
@@ -39,14 +42,15 @@
 
 
 
-| Figure.1 A & B   | ![figure1 A](./paper figure/figure1 A.png)     | ![figure1 B](./paper figure/figure1 B.png)      |
+| Figure.1 A & B   | ![figure1 A](./paper%20figure/figure1%20A.png)     | ![figure1 B](./paper%20figure/figure1%20B.png)      |
 | ---------------- | ---------------------------------------------- | ----------------------------------------------- |
-| Figure.1  NN/gNN | ![f1 NN](./result/figure/function/L2 0f u.png) | ![f1 NN](./result/figure/function/L2 0f u`.png) |
+| Figure.1  NN/gNN | ![f1 NN](./result/figure/function/L2%200f%20u.png) | ![f1 NN](./result/figure/function/L2%200f%20u`.png) |
 |                  |                                                |                                                 |
 
 
 
 - **3.2.1 Poisson equation**
+
   $$
   \Delta u = \sum_{i=1}^{4} isin(ix) + 8sin(8x),  x\in [0, \pi]
   $$
@@ -62,7 +66,7 @@
 
 ### **预测对比：**
 
-| Figure.2 D & E | ![figure 2 D](./paper figure/figure2 D.png)                  | ![figure 2 D](./paper figure/figure2 E.png)                  |
+| Figure.2 D & E | ![figure 2 D](./paper%20figure/figure2%20D.png)                  | ![figure 2 D](./paper%20figure/figure2%20E.png)                  |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 15-u/u'        | ![figure2 15 D](./result/figure/poisson-1D/u-pinn-15.png)![figure2 15 D](./result/figure/poisson-1D/u-gpinn-15.png) | ![figure2 15 E](./result/figure/poisson-1D/u_g-pinn-15.png)![figure2 15 E](./result/figure/poisson-1D/u_g-gpinn-15.png) |
 | 20-u/u`        | ![figure2 20 D](./result/figure/poisson-1D/u-pinn-20.png)![figure2 20 D](./result/figure/poisson-1D/u-gpinn-20.png) | ![figure2 20 E](./result/figure/poisson-1D/u_g-pinn-20.png)![figure2 20 E](./result/figure/poisson-1D/u_g-gpinn-20.png) |
@@ -71,10 +75,9 @@
 
 ### Figure.2 A,B & C 对比：
 
-| Figure.2 A,B & C | ![A](./paper figure/figure2 A.png)           | ![A](./paper figure/figure2 B.png)            | ![A](./paper figure/figure2 C.png)             |
+| Figure.2 A,B & C | ![A](./paper%20figure/figure2%20A.png)           | ![A](./paper%20figure/figure2%20B.png)            | ![A](./paper%20figure/figure2%20C.png)             |
 | ---------------- | -------------------------------------------- | --------------------------------------------- | ---------------------------------------------- |
-| 复现             | ![A](./result/figure/poisson-1D/L2 of u.png) | ![A](./result/figure/poisson-1D/L2 of u`.png) | ![A](./result/figure/poisson-1D/pde error.png) |
-|                  |                                              |                                               |                                                |
+| 复现             | ![A](./result/figure/poisson-1D/L2%20of%20u.png) | ![A](./result/figure/poisson-1D/L2%20of%20u`.png) | ![A](./result/figure/poisson-1D/pde%20error.png) |                                 
 
 
 
@@ -82,25 +85,20 @@
 
 
 
-| Figure.2 F & G | ![F](./paper figure/figure2 F.png)          | ![F](./paper figure/figure2 G.png)           |
+| Figure.2 F & G | ![F](./paper%20figure/figure2%20F.png)          | ![F](./paper%20figure/figure2%20G.png)           |
 | -------------- | ------------------------------------------- | -------------------------------------------- |
 | 复现           | ![F](./result/figure/poisson-1D/u_of_w.png) | ![G](./result/figure/poisson-1D/u`_of_w.png) |
 
-
-
-
-
-
+- 注：复现的图与论文原图情况不一致的原因是，作者是训练10次取平均的结果，而由于设备的原因，我只run了3次取平均的结果，所以可能是计算平台的差异导致的不一样的结果；但是，总体来说，在合适的情况下，权重还是gPINN的效果更好一点。
 
 - **3.2.2 Diffusion-reaction equation**
-  
-  
   
   
   $$
   \frac{\partial u}{\partial t} = D \frac{\partial^2 u}{\partial x^2} + R(x, t), \qquad x \in [-\pi, \pi], t \in [0, 1]
   $$
-
+  
+  
   $$
   R(x, t) = e^{-t}[\frac{3}{2}sin(2x)+\frac{8}{3}sin(3x)+\frac{15}{4}sin(4x)+\frac{63}{8}sin(8x)]
   $$
@@ -108,8 +106,6 @@
   
   
   - **Loss Function:**
-    
-    
     
     
     $$
@@ -120,22 +116,15 @@
 
 ### 预测对比：
 
-| ![figure bc](./paper figure/figure4 BC.png)![figure bc](./paper figure/figure4 DE.png) |
+| ![figure bc](./paper%20figure/figure4%20BC.png)![figure bc](./paper%20figure/figure4%20DE.png) |
 | ------------------------------------------------------------ |
 
 
 
-| <img src="./result/figure/diffusion-reaction/exact.png" alt="exact" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/PINNs-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-PINNs-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/gPINNs, w=0.1-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-gPINNs, w=0.1-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/gPINNs, w=0.01-50.png" alt="PINN" style="zoom: 25%;" /><img src="./result/figure/diffusion-reaction/absolute error-gPINNs, w=0.01-50.png" alt="PINN" style="zoom: 25%;" /> |
+| ![figure.4](./result/figure/diffusion-reaction/figure4.png)|
 | ------------------------------------------------------------ |
 
-
-
-
-
-
-
-
-
+- 注：这里的gPINNs第一幅图g_wight=0.1， 第二幅图g_weight=0.01
 ----
 
 
@@ -145,10 +134,8 @@
 - **3.3.1 Brinkman-Forchheimer model**
 
 $$
--\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
+ -\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
 $$
-
-
 
 
 
@@ -161,12 +148,11 @@ $$
 
 
 
-
 ### 预测对比：
 
-| Figure 6. D                        | ![figure.6 D](./paper figure/figure6 D.png)                  |
+| Figure 6. D                        | ![figure.6 D](./paper%20figure/figure6%20D.png)                  |
 | ---------------------------------- | ------------------------------------------------------------ |
-| 10 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-10.png)![nn](./result/figure/BF/case 1/u-gpinn-10.png) |
-| 20 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-20.png)![nn](./result/figure/BF/case 1/u-gpinn-20.png) |
-| 30 train points - 5 observe points | ![nn](./result/figure/BF/case 1/u-pinn-30.png)![nn](./result/figure/BF/case 1/u-gpinn-30.png) |
+| 10 train points - 5 observe points | ![nn](./result/figure/BF/case%201/u-pinn-10.png) ![nn](./result/figure/BF/case%201/u-gpinn-10.png) |
+| 20 train points - 5 observe points | ![nn](./result/figure/BF/case%201/u-pinn-20.png) ![nn](./result/figure/BF/case%201/u-gpinn-20.png) |
+| 30 train points - 5 observe points | ![nn](./result/figure/BF/case%201/u-pinn-30.png) ![nn](./result/figure/BF/case%201/u-gpinn-30.png) |
 
