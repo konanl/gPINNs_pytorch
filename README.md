@@ -160,7 +160,7 @@ $$
 
 ### Figure.6 E
 
-| ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 30%;" /> |
+| ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 20%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
 - 目前出现的问题：PINNs明显在1e-4左右能够收敛，而至少在50000epoch内gPINNs无法收敛，这一点是不对的，目前在debug
