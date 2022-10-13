@@ -23,7 +23,7 @@
 
   - **Loss Function:** 
   
-    $$ 
+    $$
     \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2} 
     $$
 
@@ -156,3 +156,11 @@ $$
 | 20 train points - 5 observe points | ![nn](./result/figure/BF/case%201/u-pinn-20.png) ![nn](./result/figure/BF/case%201/u-gpinn-20.png) |
 | 30 train points - 5 observe points | ![nn](./result/figure/BF/case%201/u-pinn-30.png) ![nn](./result/figure/BF/case%201/u-gpinn-30.png) |
 
+
+
+### Figure.6 E
+
+| ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 30%;" /> |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+
+- 目前出现的问题：PINNs明显在1e-4左右能够收敛，而至少在50000epoch内gPINNs无法收敛，这一点是不对的，目前在debug
