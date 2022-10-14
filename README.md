@@ -133,6 +133,9 @@
 
 - **3.3.1 Brinkman-Forchheimer model**
 
+### case 1
+
+
 $$
  -\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
 $$
@@ -163,4 +166,35 @@ $$
 | ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 20%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
-- 目前出现的问题：PINNs明显在1e-4左右能够收敛，而至少在50000epoch内gPINNs无法收敛，这一点是不对的，目前在debug
+
+
+
+
+### case 2
+
+
+
+### 预测对比：
+
+| Figure.7 A                                          | ![figure.7 A](./paper%20figure/figure7%20A.png)              |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| 10 train points - 5 observe points pinn             | ![figure.7 A NN](./result/figure/BF/case%202/u-NN-10.png)    |
+| 10 train points - 5 observe points gpinn w=0.1/0.01 | ![figure.7 A NN](./result/figure/BF/case%202/u-gNN,%20w=0.1-10.png)![figure.7 A NN](./result/figure/BF/case%202/u-gNN,%20w=0.01-10.png) |
+
+
+
+### Figure.7 B
+
+| ![figure.7 B](./paper%20figure/figure7%20B.png) | <img src="./result/figure/BF/case%202/figure7_B.png" alt="figure7 B" style="zoom:30%;" /> |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+|                                                 |                                                              |
+
+ 
+
+
+
+### Figure.7 C
+
+| ![figure.7 B](./paper%20figure/figure7%20C.png) | <img src="./result/figure/BF/case%202/figure7_C.png" alt="figure7 C" style="zoom:30%;" /> |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+
