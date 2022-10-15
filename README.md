@@ -121,11 +121,19 @@
 
 
 
-| ![figure.4](./result/figure/diffusion-reaction/figure4.png)|
-| ------------------------------------------------------------ |
+| ![figure.4](./result/figure/diffusion-reaction/figure4.png) |
+| ----------------------------------------------------------- |
 
 - 注：这里的gPINNs第一幅图g_wight=0.1， 第二幅图g_weight=0.01
 ----
+
+
+
+### Figure.3 A,B & C,D 对比：
+
+| Figure.3 | ![figure bc](./paper%20figure/figure3.png)                   |
+| -------- | ------------------------------------------------------------ |
+| 复现     | <img src="./result/figure/diffusion-reaction/figure3-A.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-B.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-C.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-D.png" alt="figure.3" style="zoom:50%;" /> |
 
 
 
@@ -196,5 +204,35 @@ $$
 ### Figure.7 C
 
 | ![figure.7 B](./paper%20figure/figure7%20C.png) | <img src="./result/figure/BF/case%202/figure7_C.png" alt="figure7 C" style="zoom:30%;" /> |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+
+
+
+
+
+### When we add Gaussian noise
+
+### 预测对比：
+
+| Figure.8 A | ![figure.8 A](./paper%20figure/figure8%20A.png)              |
+| ---------- | ------------------------------------------------------------ |
+| 复现       | <img src="./result/figure/BF/case%202/u-NN-12_add_GS_noise.png" alt="figure8 A" style="zoom:30%;" /><img src="./result/figure/BF/case%202/u-gNN, w=0.1-12_add_GS_noise.png" alt="figure8 A" style="zoom:30%;" /> |
+
+
+
+
+
+### Figure.8 B
+
+| ![figure.8 B](./paper%20figure/figure8%20B.png) | <img src="./result/figure/BF/case%202/figure8_B.png" alt="figure8 A" style="zoom:30%;" /> |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+
+
+
+
+
+### Figure.8 C
+
+| ![figure.8 C](./paper%20figure/figure8%20C.png) | <img src="./result/figure/BF/case%202/figure8_C.png" alt="figure8 C" style="zoom:30%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
