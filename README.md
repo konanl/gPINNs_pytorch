@@ -131,9 +131,16 @@
 
 ### Figure.3 A,B & C,D 对比：
 
-| Figure.3 | ![figure bc](./paper%20figure/figure3.png)                   |
-| -------- | ------------------------------------------------------------ |
-| 复现     | <img src="./result/figure/diffusion-reaction/figure3-A.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-B.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-C.png" alt="figure.3" style="zoom:50%;" /><img src="./result/figure/diffusion-reaction/figure3-D.png" alt="figure.3" style="zoom:50%;" /> |
+| Figure.3 | ![figure bc](./paper%20figure/figure3.png) |
+| :------- | ------------------------------------------ |
+
+
+
+| <img src="./result/figure/diffusion-reaction/figure3-A.png" alt="figure.3" style="zoom:10%;" /> | <img src="./result/figure/diffusion-reaction/figure3-B.png" alt="figure.3" style="zoom:10%;" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="./result/figure/diffusion-reaction/figure3-C.png" alt="figure.3" style="zoom:10%;" /> | <img src="./result/figure/diffusion-reaction/figure3-D.png" alt="figure.3" style="zoom:10%;" /> |
+
+
 
 
 
