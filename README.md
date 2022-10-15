@@ -142,6 +142,14 @@
 
 
 
+- 对于这里当gPINN的weight分别等于1，0.1，0.01时，出现的不稳定情况，原因可能如下：
+  1. 作者这里是，对于每一种模型分别训练了10次，然后取平均情况，所以最后的结果相对来说也叫稳定；而由于没有足够的计算资源，我只训练了2次取平均，所以结果相对来说也比较不稳定
+  2. 梯度的计算没有优化，模型在计算梯度的过程中，存在一些累计的误差导致gPINN的权重较大时，效果不如原始的PINN
+
+
+
+
+
 
 
 #### 2. 反向问题(Inverse problem)
@@ -176,9 +184,27 @@ $$
 
 
 
+
+
+### Figure.6 A,B,C
+
+
+
+| ![figure.6 ABC](./paper%20figure/figure6%20ABC.png) |
+| --------------------------------------------------- |
+
+
+
+
+
+| <img src="./result/figure/BF/case%201/figure6_A.png" alt="figure.6 A" style="zoom:25%;" /> | <img src="./result/figure/BF/case%201/figure6_B.png" alt="figure.6 B" style="zoom:25%;" /> | <img src="./result/figure/BF/case%201/figure6_C.png" alt="figure.6 C" style="zoom:25%;" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+
+
 ### Figure.6 E
 
-| ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 20%;" /> |
+| ![Figure.6 E](./paper%20figure/figure6%20E.png) | <img src="./result/figure/BF/case%201/figure6_E.png" alt="re figure.6 E" style="zoom: 10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
 
@@ -200,7 +226,7 @@ $$
 
 ### Figure.7 B
 
-| ![figure.7 B](./paper%20figure/figure7%20B.png) | <img src="./result/figure/BF/case%202/figure7_B.png" alt="figure7 B" style="zoom:30%;" /> |
+| ![figure.7 B](./paper%20figure/figure7%20B.png) | <img src="./result/figure/BF/case%202/figure7_B.png" alt="figure7 B" style="zoom:10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 |                                                 |                                                              |
 
@@ -210,7 +236,7 @@ $$
 
 ### Figure.7 C
 
-| ![figure.7 B](./paper%20figure/figure7%20C.png) | <img src="./result/figure/BF/case%202/figure7_C.png" alt="figure7 C" style="zoom:30%;" /> |
+| ![figure.7 B](./paper%20figure/figure7%20C.png) | <img src="./result/figure/BF/case%202/figure7_C.png" alt="figure7 C" style="zoom:10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
 
@@ -231,7 +257,7 @@ $$
 
 ### Figure.8 B
 
-| ![figure.8 B](./paper%20figure/figure8%20B.png) | <img src="./result/figure/BF/case%202/figure8_B.png" alt="figure8 A" style="zoom:30%;" /> |
+| ![figure.8 B](./paper%20figure/figure8%20B.png) | <img src="./result/figure/BF/case%202/figure8_B.png" alt="figure8 A" style="zoom:10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
 
@@ -240,6 +266,6 @@ $$
 
 ### Figure.8 C
 
-| ![figure.8 C](./paper%20figure/figure8%20C.png) | <img src="./result/figure/BF/case%202/figure8_C.png" alt="figure8 C" style="zoom:30%;" /> |
+| ![figure.8 C](./paper%20figure/figure8%20C.png) | <img src="./result/figure/BF/case%202/figure8_C.png" alt="figure8 C" style="zoom:10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
