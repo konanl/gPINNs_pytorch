@@ -314,13 +314,13 @@ $$
 
 - 3.1.[Function approximation](./function.py)
 
-- 3.2.1 [1D poisson equation](./poisson 1d.py)
-- 3.2.2 [Diffusion-reaction equation](./diffusion reaction.py)
+- 3.2.1 [1D poisson equation](./poisson%201d.py)
+- 3.2.2 [Diffusion-reaction equation](./diffusion%20reaction.py)
 - 3.3.1 Brinkman-Forchheimer model
   - [Case 1](./BF1.py)
   - [Case 2](./BF2.py)
 
-- 3.3.2 [Diffusion-reaction system](./diffusion reaction inverse.py)
+- 3.3.2 [Diffusion-reaction system](./diffusion%20reaction%20inverse.py)
 
 
 
