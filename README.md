@@ -22,15 +22,14 @@
 
 
   - **Loss Function:** 
-  
-    $$
-    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2} 
+  $$
+    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}
     $$
 
 
 ### 预测对比：
 
-| Figure.1 C & D | ![Figure.1 C](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20C.png)                  | ![Figure.1 D](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20D.png)                  |
+| Figure.1 C & D | ![Figure.1 C](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20C.png) | ![Figure.1 D](https://github.com/konanl/gPINNs_pytorch/blob/main/paper%20figure/figure1%20D.png) |
 | :------------: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |    15-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-15.png)![gPINNs 15 u](./result/figure/function/u-gpinn-15.png) | ![gPINNs 15 u_g](./result/figure/function/u_g-pinn-15.png)![gPINNs 15 u_g](./result/figure/function/u_g-gpinn-15.png) |
 |    20-u/u`     | ![PINNs 15 u](./result/figure/function/u-pinn-20.png)![gPINNs 15 u](./result/figure/function/u-gpinn-20.png) | ![PINNs 15 u](./result/figure/function/u_g-pinn-20.png)![gPINNs 15 u](./result/figure/function/u_g-gpinn-20.png) |
@@ -269,3 +268,102 @@ $$
 | ![figure.8 C](./paper%20figure/figure8%20C.png) | <img src="./result/figure/BF/case%202/figure8_C.png" alt="figure8 C" style="zoom:10%;" /> |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 
+
+
+
+
+
+
+- 3.3.2 diffusion-reaction system
+
+### Figure 9:
+
+
+
+| Figure A | ![figure9 A](./paper%20figure/figure9%20A.png)               |
+| -------- | ------------------------------------------------------------ |
+| 复现     | PINN-10:![pinn10](./result/figure/diffusion-reaction-inverse/u-pinn-10.png)gPINN-10:![gpinn10](./result/figure/diffusion-reaction-inverse/u-gpinn-10.png)PINN-100:![pinn100](./result/figure/diffusion-reaction-inverse/u-pinn-100.png) |
+
+
+
+
+
+| Figure B | ![figure9 B](./paper%20figure/figure9%20B.png)               |
+| -------- | ------------------------------------------------------------ |
+| 复现     | PINN-10:![pinn10](./result/figure/diffusion-reaction-inverse/k-pinn-10.png)gPINN-10:![gpinn10](./result/figure/diffusion-reaction-inverse/k-gpinn-10.png)PINN-100:![pinn100](./result/figure/diffusion-reaction-inverse/k-pinn-100.png)gPINN-100:![pinn100](./result/figure/diffusion-reaction-inverse/k-gpinn-100.png) |
+
+
+
+
+
+| Figure C | ![figure9 C](./paper%20figure/figure9%20C.png)               |
+| -------- | ------------------------------------------------------------ |
+| 复现     | PINN-10:![pinn10](./result/figure/diffusion-reaction-inverse/u`-pinn-10.png)gPINN:![gpinn10](./result/figure/diffusion-reaction-inverse/u`-gpinn-10.png) |
+
+
+
+
+
+
+
+
+
+- ## 代码说明：
+
+**针对论文的 3.1 3.2 3.3 部分的所以算例均可使用[solver.py](./solver.py)来解决，此部分代码简介如下：**
+
+- 3.1.[Function approximation](./function.py)
+
+- 3.2.1 [1D poisson equation](./poisson 1d.py)
+- 3.2.2 [Diffusion-reaction equation](./diffusion reaction.py)
+- 3.3.1 Brinkman-Forchheimer model
+  - [Case 1](./BF1.py)
+  - [Case 2](./BF2.py)
+
+- 3.3.2 [Diffusion-reaction system](./diffusion reaction inverse.py)
+
+
+
+**以下模块，由于需要结合RAR，统一使用solver来实现，较复杂，所以，解决方案(train, predict模块)均写在一个python文件里**
+
+- gPINN enhanced by RAR
+
+
+
+
+
+#### 运行代码：
+
+##### python file
+
+默认：pinn模型来优化
+
+（详细参数见不同问题的源代码）
+
+- 模型中的参数说明：
+
+```bash
+usage: PINNs/gPINNs for forward diffusion reaction model [--lr LR] [--net_type NET_TYPE] [--num_epochs NUM_EPOCHS] [--resume_epoch RESUME_EPOCH]
+                                                         [--num_epochs_decay NUM_EPOCHS_DECAY] [--num_train_points NUM_TRAIN_POINTS]
+                                                         [--g_weight G_WEIGHT] [--output_transform OUTPUT_TRANSFORM]
+                                                         [--num_supervised_train_points NUM_SUPERVISED_TRAIN_POINTS] [--test_epochs TEST_EPOCHS]
+                                                         [--num_test_points NUM_TEST_POINTS] [--model_save_dir MODEL_SAVE_DIR]
+                                                         [--result_dir RESULT_DIR] [--log_dir LOG_DIR] [--log_step LOG_STEP]
+                                                         [--model_save_step MODEL_SAVE_STEP] [--lr_update_step LR_UPDATE_STEP]
+
+```
+
+
+
+
+
+
+
+
+
+- ## 复现过程中存在的问题：
+
+  
+
+1. 内容
+2. 内容
