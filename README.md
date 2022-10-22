@@ -22,9 +22,9 @@
 
 
   - **Loss Function:** 
-  $$
-    \mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}
-    $$
+$$
+\mathcal{L}  = \frac{1}{n}\sum_{i = 1}^{n}\left|u(x_{i})-\hat{u}(x_{i})\right |^{2} + w_{g}\frac{1}{n}\sum_{i = 1}^{n}\left|\bigtriangledown u(x_{i})-\bigtriangledown \hat{u}(x_{i})\right |^{2}
+$$
 
 
 ### 预测对比：
@@ -159,7 +159,7 @@
 
 
 $$
- -\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
+-\frac{\nu_{e} }{\epsilon } \nabla^{2}u + \frac{\nu u}{K} = g, \qquad x \in [0, H],
 $$
 
 
@@ -302,9 +302,90 @@ $$
 
 
 
+----
 
 
 
+### gPINN enhanced by RAR
+
+
+
+#### 1. Burger`s equation
+
+
+$$
+\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} = \nu \frac{\partial^2 u}{\partial x^2}, \qquad x \in [-1, 1], t \in [0, 1],\nu=0.01/pi.
+$$
+
+$$
+u(x, 0) = -sin(\pi x),\qquad u(-1, t)=u(1,t)=0,
+$$
+
+
+
+
+
+
+	### 误差对比：
+
+
+
+| Figure.10 | ![figure.10](./paper%20figure/figure10.png) | <img src="./result/figure/burger/figure_10_res.png" alt="figure.10 re" style="zoom:50%;" /> |
+| --------- | ------------------------------------------- | ------------------------------------------------------------ |
+
+
+
+- 注：同样这里作者是训练多次，然后取平均的结果，由于计算资源的限制，这里是我只训练了一次的结果，但是总体来说，RAR对于误差的下降还是有很明显的提升的，尤其，是对于原始PINN。
+
+
+
+### Figure.11(distribution of residual points and absolute error `OF PINN`)
+
+
+
+| Figure.11 | <img src="./paper%20figure/figure11.png" alt="figure.10" style="zoom:50%;" /> |
+| --------- | ------------------------------------------------------------ |
+
+
+
+### Figure.11 复现：
+
+
+
+| <img src="./result/figure/burger/figure_11_A_sobol.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C.png" alt="figure.11 C" style="zoom:40%;" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="./result/figure/burger/figure_11_A-1600.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1600.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1600.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1700.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1700.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1700.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1800.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1800.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1800.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1900.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1900.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1900.png" alt="figure.11 C" style="zoom:40%;" /> |
+
+
+
+### Figure.12(distribution of residual points and absolute error `OF gPINN`)
+
+
+
+
+
+| Figure.12 | <img src="./paper%20figure/figure12.png" alt="figure.12" style="zoom:50%;" /> |
+| --------- | ------------------------------------------------------------ |
+
+
+
+### Figure.12 复现：
+
+
+
+| <img src="./result/figure/burger/figure_11_A_sobol.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-gpinn.png" alt="figure.11 C" style="zoom:40%;" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="./result/figure/burger/figure_11_A-1600-gpinn.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1600-gpinn.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1600-gpinn.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1700-gpinn.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1700-gpinn.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1700-gpinn.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1800-gpinn.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1800-gpinn.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1800-gpinn.png" alt="figure.11 C" style="zoom:40%;" /> |
+| <img src="./result/figure/burger/figure_11_A-1900-gpinn.png" alt="figure.11 A" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_B-1900-gpinn.png" alt="figure.11 B" style="zoom:40%;" /> | <img src="./result/figure/burger/figure_11_C-1900-gpinn.png" alt="figure.11 C" style="zoom:40%;" /> |
+
+
+
+-----
 
 
 
