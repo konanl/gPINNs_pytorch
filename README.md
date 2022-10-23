@@ -325,8 +325,7 @@ $$
 
 
 
-
-	### 误差对比：
+### 误差对比：
 
 
 
@@ -385,6 +384,76 @@ $$
 
 
 
+- 出现的问题：
+  1. u的误差，在x=0出反而更小
+  2. 误差与原论文结果相比，精度不够
+
+
+
+
+
+#### 2. Allen–Cahn equation
+
+
+$$
+\frac{\partial u}{\partial t} = D\frac{\partial^2 u}{\partial x^2} + 5(u - u^3), \qquad x\in[-1,1],t\in[0,1] 
+$$
+
+
+
+
+initial and boundary conditions:
+
+
+$$
+u(x,0)=x^2\cos (\pi x), 
+$$
+
+
+
+
+
+$$
+u(-1,t)=u(1,t)=-1
+$$
+
+
+
+
+
+
+### 误差对比：
+
+
+
+| Figure.13 | <img src="./paper%20figure/figure13.png" alt="figure.13" style="zoom:50%;" /> |      |
+| --------- | ------------------------------------------------------------ | ---- |
+
+
+
+
+
+### Figure.14(gPINN with RAR)
+
+
+
+
+
+| Figure.14 | <img src="./paper%20figure/figure14.png" alt="figure.14" style="zoom:50%;" /> |
+| --------- | ------------------------------------------------------------ |
+
+
+
+
+
+
+
+
+
+
+
+
+
 -----
 
 
@@ -408,8 +477,8 @@ $$
 **以下模块，由于需要结合RAR，统一使用solver来实现，较复杂，所以，解决方案(train, predict模块)均写在一个python文件里**
 
 - gPINN enhanced by RAR
-
-
+  - [Burgers' equation](./burger.py)
+  - [Allen-Cahn equation](./allen_cahn.py)
 
 
 
